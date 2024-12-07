@@ -15,5 +15,5 @@
 |  C   | rotate | 矩形旋转 | 1s | 512MiB |
 |  D   | classroom | 教室分配 I | 1s | 512MiB |
 |  E   | classroom2 | 教室分配 II | 1s | 512MiB |
-|  F   | filesystem | 文件系统 | 1s | 512MiB |
-|  G   |ap|基站选址|1s|512MiB|
+|  F   | filesystem | 文件系统 | 2s | 1GiB |
+|  G   | ap | 基站选址 | 1s | 512MiB |

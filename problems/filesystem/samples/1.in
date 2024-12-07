@@ -1,0 +1,10 @@
+3
+/home/folder1/file1
+/home/../file2
+/./file3
+5
+/file3
+/file4
+/file2
+/home/folder2/file5
+/home/folder2/file5
