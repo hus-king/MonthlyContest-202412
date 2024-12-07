@@ -1,0 +1,452 @@
+\documentclass[12]{article}%12pt即为小四号字
+\usepackage{ctex}%引入中文包
+\usepackage{graphicx}%插入图片的包
+\usepackage{geometry}%设置A4纸页边距的包
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}%设置页边距
+\linespread{1.25}%设置行间距
+
+
+\begin{document}
+	
+	\begin{center}
+		\LARGE 华中科技大学计算机科学与技术学院\par
+		华为智能基座社团 \par
+		2024 年 12 月月赛
+		
+		\Large HUST-Huawei AIeducationbase Monthly Coding Competition
+		
+		~\\
+		
+		\includegraphics[scale=0.5]{./pic/hustcs.png}
+		
+		~\\
+		
+		\includegraphics[scale=0.2]{./pic/huawei.jpg}
+		
+		
+		
+	\end{center}
+
+\section*{Notifications}
+
+	Hi, School of Computer Science and Technology, HUST.
+	
+	I am glad to invite you to participate in the HUST-Huawei AIeducationbase Monthly Coding Competition.
+	
+	The contest will be held on 8, December. Starting at 14:00, the contest will last for 3 hours. The contest rule is \texttt{Happy More}, which means that every unaccepted submission would lead to your score multipling $0.95$, with a minimum rate of $0.7$.
+	
+	The contest will be held on Luogu Online Judge, you could visit https://www.luogu.com.cn/contest/218654 for particpating.
+	
+	There will be $7$ problems in total as requested by the school counselor. The freshmans could try the first $4$ problems while those in their second year are able to solve all the problems.
+	
+	The problems are prepared by Liu Bainian, Huang guodong and Wu Gaoyu. We warmly welcome everyone to participate in. Please make sure that you have registered and joined the school team on Luogu Platform.
+	
+	We hope you will enjoy and have fun in the contest. Good luck!
+	
+	\newpage
+	
+	
+	\section*{\textsf{Problem 1: }\textrm{IP 地址}}
+	\begin{tabular}{ll}
+		\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+		\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+		\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{1 seconds} \\
+		\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{512 megabytes}\\
+	\end{tabular}
+	\subsection*{\textsf{Problem Description}}
+	
+	IP 地址是计算机网络中非常重要的概念。IPV4 中，每台计算机被一个 32 位二进制数所标识，这个 32 位二进制数就是这台计算机的 IP 地址。
+	
+	但是，32 位二进制数往往难以输入与记忆。通常，将该二进制数划分为 4 段，每段 8 位，并以十进制数的形式写出，段之间由小数点分隔。例如，$192.168.21.187$ 表示了 $11000000\ 10101000\ 00010101\ 10111011$。
+	
+	现在，给出点分形式的 IP 地址，请输出其二进制形式。
+	
+	\subsection*{\textsf{Input}}
+	\noindent 输入一行一个字符串，表示一个 IP 地址。
+	
+	\noindent 保证输入的 IP 地址合法。
+	\subsection*{\textsf{Output}}
+	\noindent 输出一行一个 32 位二进制数，表示二进制 IP 地址。
+	
+	\noindent 
+	\subsection*{\textsf{Examples}}
+	\noindent
+	\texttt{
+		\begin{tabular}{| p{7cm} | p{7cm} |}
+			\hline
+			Standard Input & Standard Output\\ \hline
+			192.168.21.187 & 11000000101010000001010110111011 \\
+			\hline
+		\end{tabular}
+	}
+	
+	\subsection*{\textsf{Scoring}}
+	
+	\noindent 保证输入的 IP 地址合法。
+	
+	\newpage
+	\section*{\textsf{Problem 2: }\textrm{暴雨症候}}
+	\begin{tabular}{ll}
+		\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+		\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+		\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{1 seconds} \\
+		\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{512 megabytes}\\
+	\end{tabular}
+	\subsection*{\textsf{Problem Description}}
+	W 市气候潮湿，全年多雨。W 市气象部门预计在接下来的 $N$ 天内将产生连续降水。
+	
+	每一天的降水量可以用一个正整数来量化，第 $i$ 天的降水量为 $r_i$。 若在接下来的 $N$ 天内，有超过 $X$ 天的降水量不低于 $X$，则称接下来的 $N$ 天可以构成 $X$ 级\textbf{暴雨症候}。
+	
+	请问，接下来的 $N$ 天最高构成几级暴雨症候。
+	
+	\subsection*{\textsf{Input}}
+	\noindent 第一行为一个整数 $N$。
+	
+	\noindent 第二行为 $N$ 个整数，第 $i$ 个为 $r_i$。
+	\subsection*{\textsf{Output}}
+	\noindent 输出一行一个整数，表示最高构成的暴雨症候等级。
+	\subsection*{\textsf{Examples}}
+	\noindent
+	\texttt{
+		\begin{tabular}{| p{7cm} | p{7cm} |}
+			\hline
+			Standard Input & Standard Output\\ \hline
+			9 & 3 \\
+			3 3 3 1 2 2 4 4 4 & \\
+			\hline
+		\end{tabular}
+	}
+	
+	
+	\subsection*{\textsf{Scoring}}
+	
+	\noindent 对于 $60\%$ 的测试数据，$1 \le N,r_i \le 1000$；
+	
+	\noindent 对于 $100\%$ 的测试数据，$1 \le N, r_i \le 10^6$。
+	
+	\newpage
+	\section*{\textsf{Problem 3: }\textrm{矩形旋转}}
+	\begin{tabular}{ll}
+		\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+		\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+		\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{1 seconds} \\
+		\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{512 megabytes}\\
+	\end{tabular}
+	\subsection*{\textsf{Problem Description}}
+	给定 $N$ 行 $N$ 列的矩阵 $A$，第 $i$ 行第 $j$ 列的数为 $A_{i,j}$，保证 $A_{i,j}\in \{0,1\}$。
+	
+	将矩阵最外层顺时针旋转一个数，输出旋转后的矩阵。
+	
+	最外层指第 $1$ 行、第 $N$ 行、第 $1$ 列、第 $N$ 列。
+
+	\subsection*{\textsf{Input}}
+	\noindent 第一行一个整数 $N$。
+	
+	\noindent 接下来 $N$ 行每行 $N$ 个整数，表示矩阵。
+	\subsection*{\textsf{Output}}
+	\noindent 输出 $N$ 行，每行 $N$ 个整数，表示旋转后的矩阵。
+	
+	\subsection*{\textsf{Examples}}
+	\noindent
+	\texttt{
+		\begin{tabular}{| p{7cm} | p{7cm} |}
+			\hline
+			Standard Input & Standard Output\\ \hline
+			4 &    1010 \\
+			0101 & 1101\\
+			1101 & 0111\\
+			1111 & 0001\\
+			0000 & \\
+			\hline
+			2 & 11\\
+			11 & 11\\
+			11 & \\
+			\hline
+		\end{tabular}
+	}
+
+\subsection*{\textsf{Scoring}}
+
+\noindent 对于 $100\%$ 的数据，$2 \le N \le 100$，$A_{i,j} \in \{0,1\}$。
+
+\newpage
+\section*{\textsf{Problem 4: }\textrm{教室分配 I}}
+\begin{tabular}{ll}
+	\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+	\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+	\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{1 seconds} \\
+	\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{512 megabytes}\\
+\end{tabular}
+\subsection*{\textsf{Problem Description}}
+华中科技大学的教学楼方方正正，教室的布局也是如此。
+
+现有 $n \times m$ 个教室排布成一个 $n$ 行 $m$ 列的矩形，你需要为这些教室分配编号，满足对于任意两个上下相邻或左右相邻的教室，它们的编号之和在所有的和中仅出现过一次。
+
+现在给定你 $n$ 和 $m$，请问能否构造出上述矩阵？如果能，请输出任意一种可行方案。
+\subsection*{\textsf{Input}}
+
+\noindent 每个测试点包含多组测试数据，第一行包含测试数据的组数 $T (1 \leq T \leq 10) $。
+
+\noindent 每组测试数据仅一行，包含两个整数 $ n,m (1 \leq n, m \leq 1000)$ 
+
+
+\subsection*{\textsf{Output}}
+\noindent 对于每组数据，在第一行输出是否有可行方案，如果有，输出 \texttt{Yes}，否则输出 \texttt{No}。
+
+\noindent 如果存在可行方案，你还需要输出 $n$ 行，每行 $m$ 个整数，第 $i$ 行的第 $j$ 个数表示矩阵的第 $i$ 行第 $j$ 列上的数字。你需要保证输出的数字都在 $1$ ~ $n \times m$ 之间且没有重复。
+
+\noindent 可行的方案可能有多种，只输出一种即可。
+
+\noindent 
+\subsection*{\textsf{Examples}}
+\noindent
+\texttt{
+	\begin{tabular}{| p{7cm} | p{7cm} |}
+		\hline
+		Standard Input & Standard Output\\ \hline
+		3 & Yes \\
+		1 1 & 1\\
+		2 3 & Yes\\
+		2 2 & 1 2\\
+		 & 3 4\\
+		 & Yes\\
+		 & 1 3 2\\
+		 & 6 5 4\\
+		\hline
+\end{tabular}
+}
+
+\subsection*{\textsf{Scoring}}
+
+\noindent 对于 $10\%$ 的测试数据，保证：$n = 1$；
+
+\noindent 对于另外 $ 10\% $ 的数据，保证：$n = 2$；
+
+\noindent 对于另外 $ 20\% $ 的数据，保证：$ T = 1 $ , $ n \times m \leq 36$；
+
+\noindent 对于另外 $ 30\% $ 的数据，保证：$n$ 和 $m$ 至少有一个是偶数；
+
+\noindent 对于 $100\%$ 的测试数据，保证：$ 1 \leq T \leq 10, 1 \leq n, m \leq 1000 $；
+
+
+\newpage
+\section*{\textsf{Problem 5: }\textrm{教室分配 II}}
+\begin{tabular}{ll}
+	\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+	\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+	\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{1 seconds} \\
+	\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{512 megabytes}\\
+\end{tabular}
+\subsection*{\textsf{Problem Description}}
+某 E 所在的学校有 $N$ 名老师和 $M$ 个课堂，每个课堂由一名老师执教，一名老师可能会执教多个课堂。第 $i$ 个课堂共有 $a_i$ 人，由老师 $T_i$ 执教。
+
+本科生院现在需要为这些课堂安排教室。根据学校有关规定，一个老师的所有课堂需要在同一间教室完成。教学楼里共有 $K$ 间教室，第 $i$ 间教室的容量为 $p_i$ 人。只有当课堂人数不超过教室容量的 $\frac{2}{3}$，方可使用该教室。
+
+现在给出所有教师和课堂的信息，请你给出一种安排教室的方案，或报告无解。
+
+\subsection*{\textsf{Input}}
+
+\noindent 每个测试点中包含多组测试数据。
+
+\noindent 输入的第一行为一个正整数 $T$，代表测试数据数目。
+
+\noindent 接下来，对于每一组测试数据，输入共 $M+2$ 行。
+
+\noindent 输入的第一行为三个正整数 $N,M,K$。
+
+\noindent 接下来 $M$ 行，每行两个正整数。第 $i$ 行为 $a_i,T_i$，代表第 $i$ 个课堂的人数和执教的老师。
+
+\noindent 最后一行为 $K$ 个正整数，第 $i$ 个数 $p_i$ 为第 $i$ 间教室的容量。 
+\subsection*{\textsf{Output}}
+\noindent 输出 $T$ 行，每行对应一组测试数据。
+
+\noindent 若有解，在这一行中输出 $N$ 个由空格分隔的整数。第 $i$ 个整数代表分配给老师 $i$ 的教室编号。
+
+\noindent 若无解，输出 $-1$。
+
+\noindent \textbf{可能存在多种合法分配方案，你只需要给出任意一种。}
+
+\subsection*{\textsf{Examples}}
+\noindent
+\texttt{
+	\begin{tabular}{| p{7cm} | p{7cm} |}
+		\hline
+		Standard Input & Standard Output\\ \hline
+		2 & 7 4 6 8\\
+		4 6 8 & -1\\
+		10 1 & \\
+		10 2 & \\
+		10 3 & \\
+		10 4 & \\
+		10 4 & \\
+		10 4 & \\
+		20 20 20 20 20 20 20 50 & \\
+		4 6 8 & \\
+		10 1 & \\
+		10 2 & \\
+		10 3 & \\
+		10 4 & \\
+		10 4 & \\
+		10 4 & \\
+		20 20 20 20 20 20 20 20 & \\
+		\hline
+	\end{tabular}
+}
+
+\subsection*{\textsf{Explanation}}
+
+对于第一组测试数据，共有 $8$ 个教室。教师 $4$ 由于有一个人数为 $20$ 的课堂，必须使用教室 $8$，其他教师可以随意选择教室。
+
+\subsection*{\textsf{Scoring}}
+
+\noindent 对于所有数据，保证 $1 \le T \le 10$，$1 \le N,M,K \le 5 \times 10^4$，$1 \le T_i \le N \le M$，$1 \le a_i,p_i \le 2 \times 10^9$。
+
+\newpage
+\section*{\textsf{Problem 6: }\textrm{文件系统}}
+\begin{tabular}{ll}
+	\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+	\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+	\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{2 seconds} \\
+	\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{1024 megabytes}\\
+\end{tabular}
+\subsection*{\textsf{Problem Description}}
+文件系统是操作系统的重要组成部分，一个文件往往可以通过路径来访问。
+
+具体来说，在文件系统中，可以创建文件和文件夹：
+
+\begin{itemize}
+	\item 根目录可以被理解为一个文件夹，其路径为 \texttt{/}
+	\item 某文件夹的路径为 \texttt{r/}，创建在该文件夹下的子文件夹（假设名字为 \texttt{folder}）的路径为 \texttt{r/folder/}，创建在该文件夹下的文件（假设名字为 \texttt{file}）的路径为 \texttt{r/file}。
+\end{itemize}
+
+
+
+此外，存在两个特殊的路径：
+
+\begin{itemize}
+	\item \texttt{./}，表示当前目录
+	\item \texttt{../}，表示上一级目录
+\end{itemize}
+
+例如，有根目录结构组织如下：
+
+
+- home
+
+|  - folder1
+
+\ \ | - file1
+
+\ \ | - file2
+
+|  - folder2
+
+\ \ | - file3
+
+那么文件 \texttt{file1} 的路径为 \texttt{/home/folder1/file1}，而路径 \texttt{/home/folder1/../folder2/./file3} 可以指明文件 \texttt{file3}。
+
+现在，给出文件系统内的全部文件的路径。接下来，给出一些路径，请你判断路径指明的文件是否存在。同时，若该文件不存在，则新建该文件。
+
+\subsection*{\textsf{Input}}
+\noindent 第一行为一个整数 $n$。
+
+\noindent 接下来 $n$ 行，每行一个字符串，表示路径。
+
+\noindent 接下来一行一个整数 $T$，表示询问的路径数目。
+
+\noindent 接下来 $T$ 行每行一个字符串，表示询问的路径。
+
+\subsection*{\textsf{Output}}
+\noindent 输出 $T$ 行，每行一个字符串：
+
+\noindent \begin{itemize}
+	\item 若存在，输出 \texttt{Yes}
+	\item 若不存在，输出 \texttt{No}
+\end{itemize}
+
+
+\noindent 
+\subsection*{\textsf{Examples}}
+\noindent
+\texttt{
+	\begin{tabular}{| p{7cm} | p{7cm} |}
+		\hline
+		Standard Input & Standard Output\\ \hline
+		3 & Yes \\
+		/home/folder1/file1 & No\\
+		/home/../file2 & Yes\\
+		/./file3 & No\\
+		5 & Yes\\
+		/file3 & \\
+		/file4 & \\
+		/file2 & \\
+		/home/folder2/file5 & \\
+		/home/folder2/file5 & \\
+		\hline
+\end{tabular}
+}
+	
+	\subsection*{\textsf{Scoring}}
+	
+	\noindent 对于 $30\%$ 的测试数据，文件均在根目录下
+	
+	\noindent 对于另外 $30\%$ 的测试数据，路径中不含字符 \texttt{.}
+	
+	\noindent 对于 $100\%$ 的测试数据，$1 \le n,T \le 5000$，路径字符串长度不超过 $100$，文件名与文件夹名仅含小写英文字母和数字，路径中仅含文件名、文件夹名和字符 \texttt{/}、\texttt{.}，保证路径以 \texttt{/} 开头。
+
+\newpage
+
+\section*{\textsf{Problem 7: }\textrm{基站选址}}
+\begin{tabular}{ll}
+	\fontsize{10pt}{10pt} Input file: & \fontsize{10pt}{10pt}\texttt{standard input} \\
+	\fontsize{10pt}{10pt} Output file: & \fontsize{10pt}{10pt}\texttt{standard output}\\
+	\fontsize{10pt}{10pt} Time limit: & \fontsize{10pt}{10pt}\texttt{1 seconds} \\
+	\fontsize{10pt}{10pt} Memory limit: & \fontsize{10pt}{10pt}\texttt{512 megabytes}\\
+\end{tabular}
+\subsection*{\textsf{Problem Description}}
+华中科技大学中共有 $n$ 座基站，第 $i$ 座基站的坐标为 $(x_i,y_i)$。
+
+为了方便管理，现在需要将这 $n$ 座基站划分为 $k$ 组。两组基站的的距离，是组中距离最近的那两个基站的距离。
+
+请问如何划分，可以让最近的两组基站的距离尽可能大，输出这个距离。
+
+\subsection*{\textsf{Input}}
+\noindent 第一行为两个整数 $n,k$。
+
+\noindent 接下来 $n$ 行，每行两个整数 $x,y$，描述一个基站的坐标
+
+\subsection*{\textsf{Output}}
+\noindent 输出两组最近的基站的最远距离，精确到小数点后 2 位。
+
+\subsection*{\textsf{Examples}}
+\noindent
+\texttt{
+	\begin{tabular}{| p{7cm} | p{7cm} |}
+		\hline
+		Standard Input & Standard Output\\ \hline
+		4 2 & 1.00\\
+		0 0 & \\
+		0 1 & \\
+		1 1 & \\
+		1 0 & \\
+		\hline
+		9 3 & 2.00\\
+		2 2 & \\
+		2 3 & \\
+		3 2 & \\
+		3 3 & \\
+		3 5 & \\
+		3 6 & \\
+		4 6 & \\
+		6 2 & \\
+		6 3 & \\
+		\hline
+	\end{tabular}
+}
+
+\subsection*{\textsf{Scoring}}
+
+\noindent 对于 $100\%$ 的数据，$2 \le k \le n \le 10^3$，$0 \le x,y \le 10^4$。
+
+
+\end{document}
