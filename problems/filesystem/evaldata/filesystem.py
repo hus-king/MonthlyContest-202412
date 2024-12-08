@@ -6,28 +6,43 @@ def proc(route):
         elif folder == '..':
             if len(ret) > 0:
                 ret.pop()
+            else:
+                raise ValueError('Invalid path')
         else:
             ret.append(folder)
     return ret
 
-def Main():
-    n = int(input())
+def Main(n, fcache, T, qcache):
     files = []
+    ret = []
     for i in range(n):
-        route = input().split('/')
+        route = fcache[i].split('/')
         route = proc(route)
         new_route = '/'.join(route)
         files.append(new_route)
-    T = int(input())
     for i in range(T):
-        route = input().split('/')
+        route = qcache[i].split('/')
         route = proc(route)
         new_route = '/'.join(route)
         if new_route in files:
-            print('Yes')
+            ret.append('Yes')
         else:
-            print('No')
             files.append(new_route)
+            ret.append('No')
+    return ret
+            
 
 if __name__ == '__main__':
-    Main()
+    cas_number = 20
+    for id in range(1, cas_number + 1):
+        input_file = f'filesystem{id}.in'
+        output_file = f'filesystem{id}.out'
+        with open(input_file, 'r') as f:
+            n = int(f.readline())
+            files = [f.readline() for _ in range(n)]
+            T = int(f.readline())
+            querys = [f.readline() for _ in range(T)]
+        answer = Main(n, files, T, querys)
+        with open(output_file, 'w') as f:
+            for ans in answer:
+                f.write(ans + '\n')
